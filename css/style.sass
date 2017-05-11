@@ -1,0 +1,11 @@
+@import "compass/css3"
+body
+	background-color: #f0f9ff
+	@include filter-gradient(#f0f9ff, #a1dbff, vertical)
+	$experimental-support-for-svg: true
+	@include background-image(linear-gradient(top,  #f0f9ff 0%,#cbebff 47%,#a1dbff 100%))
+
+.round  @include border-radius(4px) 
+.shadow
+	&.light  @include box-shadow(1px 1px 5px rgba(255, 255, 255, 0.3)) 
+	&.dark  @include box-shadow(1px 1px 5px rgba(0, 0, 0, 0.3)) 

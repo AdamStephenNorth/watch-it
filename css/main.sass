@@ -1,0 +1,190 @@
+//First line comment to trigger SASS autocompile in Atom.
+@import _base.sass
+
+// Sets the height of the document to the full height of the viewscreen.
+body
+  height: 100vh
+
+img
+  max-width: 100%
+
+.top-bar
+  color: $light-color
+  background-color: $medium-color
+
+  //temporary hiding of overflow until proper functionality is added
+  p
+    overflow: hidden
+
+.chat-read
+  color: $text-color
+  background-color: $light-color
+
+.chat-write
+  color: $text-color
+  background-color: $light-color
+
+.bottom-bar
+  color: $light-color
+  background-color: $dark-color
+
+//re-arranges top-bar sections in portrait mode
+@media (orientation:portrait)
+.top-bar
+  //allows for absolute positioning of child elements within the .top-bar
+  position: relative
+
+  .site-logo
+    position: absolute
+    left: (5/12)*100vw
+
+  .favorite-channels
+    position: absolute
+    left: (2/12)*100vw
+
+  .channel-search
+    position: absolute
+    left: (7/12)*100vw
+
+  .usr-flag
+    position: absolute
+    left: (10/12)*100vw
+
+// sets bar and image heights for devices that have an xs width in portrait orientation
+@media (max-width:480px)
+.top-bar
+  height: (2/16)*100vh
+
+  img
+    height: (1/16)*100vh
+
+.chat-read
+  height: (10/16)*100vh
+
+.chat-write
+  height: (2/16)*100vh
+
+.bottom-bar
+  height: (2/16)*100vh
+
+// sets bar and image heights for devices that have an xs width in landscape orientation
+@media (max-width:480px)
+.top-bar
+  height: (2/16)*100vh
+
+  img
+    height: (2/16)*100vh
+
+.chat-read
+  height: (10/16)*100vh
+
+.chat-write
+  height: (2/16)*100vh
+
+.bottom-bar
+  height: (2/16)*100vh
+
+//sets bar and image heights for devices that have a sm width in landscape orientation
+@media (max-width:768) and (orientation:landscape)
+.top-bar
+  height: (1/12)*100vh
+
+  img
+    height: (1/12)*100vh
+
+.chat-read
+  height: (8/12)*100vh
+
+.chat-write
+  height: (2/12)*100vh
+
+.bottom-bar
+  height: (1/12)*100vh
+
+//sets bar and image heights for devices that have a sm width in portrait orientation
+@media (max-width:768) and (orientation:portrait)
+.top-bar
+  height: (3/16)*100vh
+
+  img
+    height: (1.5/16)*100vh
+
+.chat-read
+  height: (8/16)*100vh
+
+.chat-write
+  height: (3/16)*100vh
+
+.bottom-bar
+  height: (2/16)*100vh
+
+//sets bar and image heights for devices that have a md width in landscape orientation
+@media (max-width:980px) and (orientation:landscape)
+.top-bar
+  height: (1.5/12)*100vh
+
+  img
+    height: (1.5/12)*100vh
+
+.chat-read
+  height: (7.5/12)*100vh
+
+.chat-write
+  height: (1.5/12)*100vh
+
+.bottom-bar
+  height: (1.5/12)*100vh
+
+
+//sets bar and image heights for devices that have a md width in portrait orientation
+@media (max-width:768px) and (orientation:portrait)
+.top-bar
+  height: (3/16)*100vh
+
+  img
+    height: (1.5/16)*100vh
+
+
+.chat-read
+  height: (8/16)*100vh
+
+.chat-write
+  height: (3/16)*100vh
+
+.bottom-bar
+  height: (2/16)*100vh
+
+
+//sets bar and image heights for devices that have a lg width in portrait orientation
+@media (min-width:981px)
+.top-bar
+  height: (2/12)*100vh
+
+  img
+    height: (1/12)*100vh
+
+.chat-read
+  height: (7/12)*100vh
+
+.chat-write
+  height: (2/12)*100vh
+
+.bottom-bar
+  height: (1/12)*100vh
+
+//sets bar and image heights for devices that have a lg width in landscape orientation
+@media (min-width:981px)
+.top-bar
+  height: (2/12)*100vh
+
+  img
+    height: (2/12)*100vh
+
+.chat-read
+  height: (7/12)*100vh
+
+.chat-write
+  height: (2/12)*100vh
+
+.bottom-bar
+  height: (1/12)*100vh
